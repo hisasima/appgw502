@@ -51,7 +51,7 @@ No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムア
 
 <strong> Application Gateway V2 </strong> の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは 60 秒となることが確認できております。そのため、Web サーバー側で 90 秒や 120 秒といったタイムアウトを設定いただき、動作をご確認いただけますと幸いです。
 
-<h2 id="バックエンドが一時的に応答不可となり TCP セッションを切断している"><a href="#バックエンドが一時的に応答不可となり TCP セッションを切断している" class="headerlink" title="バックエンドが一時的に応答不可となり TCP セッションを切断している"></a><a href="#backend-issue">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
+<h2 id="バックエンドが一時的に応答不可となり TCP セッションを切断している"><a href="#バックエンドが一時的に応答不可となり TCP セッションを切断している" class="headerlink" title="バックエンドが一時的に応答不可となり TCP セッションを切断している"></a><a href="#backend-issue">バックエンドが一時的に応答不可となり TCP セッションを切断している</a></h2>
 
 HTTP KeepAlive の問題ではない場合はバックエンドが一時的に応答不可となり TCP セッションを切断している可能性もございます。
 
