@@ -35,9 +35,9 @@ HTTP KeepAlive は複数の HTTP のリクエストで TCP のセッションを
 167.220.223.186 がクライアント (Chrome)
 ```
 
-No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムアウトを迎え、FIN を送りますが、そのタイミングでクライアントが HTTP リクエストを実施したため、そのリクエストについてはレスポンスが返らずに TCP セッションがクローズされていることを確認できます。
+No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムアウトを迎え、FIN/ACK [No 99] を送りますが、そのタイミングでクライアントが HTTP リクエスト [No 100] を実施したため、そのリクエストについてはレスポンスが返らずに TCP セッションがクローズされていることを確認できます。
 
-![Caputure](https://github.com/hisasima/sslcertpreview/blob/master/capture.jpg)
+![Caputure](https://github.com/hisasima/sslcertpreview/blob/master/capture.png)
 
 
 これと同様の事象が Application Gateway - バックエンド間で発生した場合に Application Gateway は 502 エラーをクライアントに返す動作となります。
