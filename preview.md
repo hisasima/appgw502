@@ -12,15 +12,6 @@ tags:
 今回は Application Gateway 経由で Web サイトへアクセスしている際にまれに 502 エラーが発生するという事象についてよくある事例を記載させていただきます。
 
 ---
-Application Gateway をご利用時に証明書が関連する設定としては、リスナーと HTTP 設定があります。
-リスナーはクライアントからのアクセスを受け付ける部分で、HTTP 設定はバックエンドの Web サーバーへ接続するための定義を行う部分となります。Application Gateway の設定や構成例については以下もご参照ください。
-
-[Application Gateway の構成について](https://jpaztech1.z11.web.core.windows.net/ApplicationGateway%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6.html)
-
-Application Gateway にて End to End の TLS (クライアントからバックエンドまですべて HTTPS による通信) を構成する場合、リスナーとバックエンドの Web サーバーにて証明書を構成する必要があります (HTTP 設定も構成により証明書の設定が必要)。
- 
-End to End の TLS にはせずに、クライアントと Application Gateway の間だけを TLS 化する場合は、バックエンドのサーバーや HTTP 設定に対する証明書の設定は必要ありません。Application Gateway に証明書を設定したり、証明書の更新などを行う場合、どちらの証明書が必要か、どの証明書の更新が必要かなどを区別して考える必要があります。
-
 まれに 502 エラーが発生するという事象についてよくある事例としては以下がございます。
 <p> 	<li><a href="#backend-keepalive"><strong>バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</strong></a></li></p><p></p>
 <p> 	<li><a href="#backend-issue"><strong>バックエンドが一時的に応答不可となり TCP セッションを切断している</strong></a></li></p><p></p>
