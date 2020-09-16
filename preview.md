@@ -26,7 +26,7 @@ tags:
 
 HTTP KeepAlive は複数の HTTP のリクエストで TCP のセッションを使いまわし、通信を効率化するために利用されますが、Web サーバーにて HTTP KeepAlive が有効化されている場合に TCP の通信状況によってはまれに HTTP のリクエストが破棄されてしまうような事象が発生します。
 
-以下のパケットは Chrome と Apache (HTTP KeepAlive : Timeout 5 秒) で動作を確認した際のパケットです。
+以下のパケットは Chrome と Apache (HTTP KeepAlive : Timeout 5 秒) で動作を確認した際のパケットです。(<strong>　※HTTP KeepAlive 動作確認のため、Application Gateway は利用しておりません</strong>)
 
 ```
 10.0.1.4 が Web サーバー Apache 
