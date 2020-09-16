@@ -16,7 +16,7 @@ tags:
 <p> 	<li><a href="#backend-keepalive"><strong>バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</strong></a></li></p><p></p>
 <p> 	<li><a href="#backend-issue"><strong>バックエンドが一時的に応答不可となり TCP セッションを切断している</strong></a></li></p><p></p>
 
-以下のブログにも記載されておりますが、Application Gateway が HTTP Status 502 を返す理由はいくつかございますが、散発的に発生するような場合は以下に記載した内容も一度ご確認いただけますと幸いです。
+以下のブログにも記載されておりますが、Application Gateway が HTTP Status 502 を返す理由はいくつかございますが、散発的に発生するような場合は本稿に記載した内容も一度ご確認いただけますと幸いです。
 
 - [Application Gateway における 502 Error について](https://jpaztech.github.io/blog/archive/application-gateway-502-error-info/)
 
