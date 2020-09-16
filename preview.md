@@ -1,6 +1,6 @@
 ---
 title: Application Gateway の証明書関連のトラブルシューティング
-date: 2020-05-11 12:30:00
+date: 2020-09-16 12:30:00
 tags:
   - Network
   - ApplicationGateway
@@ -20,8 +20,6 @@ tags:
 
 - [Application Gateway における 502 Error について](https://jpaztech.github.io/blog/archive/application-gateway-502-error-info/)
 
-
-バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている
 
 
 <h2 id="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"><a href="#バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている" class="headerlink" title="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"></a><a href="#backend-keepalive">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
@@ -53,13 +51,15 @@ Application Gateway V1 の場合、Application Gateway - バックエンド間�
 
 Application Gateway V2 の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは 60 秒となることが確認できております。そのため、Web サーバー側で 90 秒や 120 秒といったタイムアウトを設定いただき、動作をご確認いただけますと幸いです。
 
-バックエンドが一時的に応答不可となり TCP セッションを切断している
+### 
+
+<h2 id="バックエンドが一時的に応答不可となり TCP セッションを切断している"><a href="#バックエンドが一時的に応答不可となり TCP セッションを切断している" class="headerlink" title="バックエンドが一時的に応答不可となり TCP セッションを切断している"></a><a href="#backend-issue">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
 
 HTTP KeepAlive の問題ではない場合はバックエンドが一時的に応答不可となり TCP セッションを切断している可能性もございます。
 
 再現の頻度によっては調査が難しくなる場合がございますが、高頻度で再現する場合や時間帯が決まっている場合は以下もご確認ください。
 
-バックエンドの Web サーバーにてパケットキャプチャを取得いただき、以下の点を確認
+## バックエンドの Web サーバーにてパケットキャプチャを取得いただき、以下の点を確認
 
 	- Application Gateway からリクエストが届いているか
 	- Application Gateway のアクセスログと照らし合わせ、該当の 502 エラーのリクエストに対して、レスポンスを返しているか
