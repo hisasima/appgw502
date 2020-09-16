@@ -45,15 +45,11 @@ No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムア
 * HTTP KeepAlive の無効化が難しい場合、KeepAlive のタイムアウトを数分程度に長くして事象が緩和されるか
 
 一般的に HTTP KeepAlive によりエラーが発生する場合、クライアント側のタイムアウトより、サーバー側のタイムアウトを長くすることで対応可能となります。
-
-``` 
-Application Gateway V1 の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは固定で定まっておりません。
+ 
+**Application Gateway V1 **の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは固定で定まっておりません。
 そのため、300 秒等の長い時間を設定いただき、502 エラーが緩和されるかをご確認いただくか、HTTP KeepAlive を無効化することをご検討ください。
-```
 
-```
-Application Gateway V2 の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは 60 秒となることが確認できております。そのため、Web サーバー側で 90 秒や 120 秒といったタイムアウトを設定いただき、動作をご確認いただけますと幸いです。
-```
+**Application Gateway V2 **の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは 60 秒となることが確認できております。そのため、Web サーバー側で 90 秒や 120 秒といったタイムアウトを設定いただき、動作をご確認いただけますと幸いです。
 
 <h2 id="バックエンドが一時的に応答不可となり TCP セッションを切断している"><a href="#バックエンドが一時的に応答不可となり TCP セッションを切断している" class="headerlink" title="バックエンドが一時的に応答不可となり TCP セッションを切断している"></a><a href="#backend-issue">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
 
