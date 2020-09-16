@@ -1,5 +1,5 @@
 ---
-title: Application Gateway の証明書関連のトラブルシューティング
+title: Application Gateway の散発的な 502 エラー
 date: 2020-09-16 12:30:00
 tags:
   - Network
