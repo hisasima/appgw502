@@ -24,7 +24,7 @@ tags:
 バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている
 
 
-<h2 id="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"><a href="#バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている" class="headerlink" title="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"></a><a href="#abackend-keepalive">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
+<h2 id="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"><a href="#バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている" class="headerlink" title="バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている"></a><a href="#backend-keepalive">バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</a></h2>
 
 HTTP KeepAlive は複数の HTTP のリクエストで TCP のセッションを使いまわし、通信を効率化するために利用されますが、Web サーバーにて HTTP KeepAlive が有効化されている場合に TCP の通信状況によってはまれに HTTP のリクエストが破棄されてしまうような事象が発生します。
 
