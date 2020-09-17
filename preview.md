@@ -29,7 +29,7 @@ HTTP KeepAlive は複数の HTTP のリクエストで TCP のセッションを
 以下のパケットは Chrome と Apache (HTTP KeepAlive : Timeout 5 秒) で動作を確認した際のパケットです。(<strong>※HTTP KeepAlive 動作確認のため、Application Gateway は利用しておりません</strong>)
 
 ```
-10.0.1.4 が Web サーバー Apache 
+10.0.1.4 が Web サーバー (Apache) 
 167.220.223.186 がクライアント (Chrome)
 ```
 
