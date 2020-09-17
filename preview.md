@@ -39,9 +39,10 @@ No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムア
 
 
 上記のような クライアント - Web サーバー間のシナリオの場合、クライアント側に  502 エラーが記録されることはなく、ブラウザの動作によっては再接続で自動復旧する場合があります。
+
 一方で、これと同様の事象が Application Gateway - バックエンドの Web サーバー間で発生した場合に Application Gateway は クライアントに 502 エラーを返す動作となります。(下図参照)
 
-![AppGW502](https://github.com/hisasima/appgw502/blob/master/AppGW502error.png)
+![AppGW502error](https://github.com/hisasima/appgw502/blob/master/AppGW502error.png)
 
 そのため、散発的に 502 エラーが発生する場合、以下の点についてご確認いただけますでしょうか。
 * HTTP KeepAlive が Web サーバーで有効化されていた場合、無効化し、事象が改善するか
