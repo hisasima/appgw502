@@ -74,8 +74,10 @@ HTTP KeepAlive の問題ではない場合はバックエンドが一時的に�
 
 ## FAQ
 	
-#### - xxxx
-xxxx
+#### クライアント - Application Gatweay 間の Application Gateway 側のタイムアウトはいくつですか。
+V1 SKU の場合、120 秒、V2 SKU の場合 75 秒です。
+
+[キープアライブ タイムアウトと TCP アイドル タイムアウトの設定はどのようになっていますか?](https://docs.microsoft.com/ja-jp/azure/application-gateway/application-gateway-faq#what-are-the-settings-for-keep-alive-timeout-and-tcp-idle-timeout)
 
 ## 参考情報
 
