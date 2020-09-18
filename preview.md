@@ -14,7 +14,7 @@ tags:
 ---
 まれに 502 エラーが発生するという事象についてよくある事例としては以下がございます。
 <p> 	<li><a href="#backend-keepalive"><strong>バックエンドの Web サーバーにて HTTP KeepAlive が有効化されている</strong></a></li></p><p></p>
-<p> 	<li><a href="#backend-issue"><strong>バックエンドが一時的に応答不可となり TCP セッションを切断している</strong></a></li></p><p></p>
+<p> 	<li><a href="#backend-issue"><strong>一時的な要因でバックエンドが TCP セッションを切断している</strong></a></li></p><p></p>
 
 以下のブログにも記載されておりますが、Application Gateway が HTTP Status 502 を返す理由はいくつかございます。散発的に発生するような場合は本稿に記載した内容も一度ご確認いただけますと幸いです。
 
@@ -55,9 +55,9 @@ No 97 で Web サーバーがレスポンスを返した 5 秒後にタイムア
 
 <strong> Application Gateway V2 </strong> の場合、Application Gateway - バックエンド間で Application Gateway がクライアントとして動作する場合の HTTP KeepAlive のタイムアウトは 60 秒となることが確認できております。そのため、Web サーバー側で 90 秒や 120 秒といったタイムアウトを設定いただき、動作をご確認いただけますと幸いです。
 
-<h2 id="バックエンドが一時的に応答不可となり TCP セッションを切断している"><a href="#バックエンドが一時的に応答不可となり TCP セッションを切断している" class="headerlink" title="バックエンドが一時的に応答不可となり TCP セッションを切断している"></a><a href="#backend-issue">バックエンドが一時的に応答不可となり TCP セッションを切断している</a></h2>
+<h2 id="一時的な要因でバックエンドが TCP セッションを切断している"><a href="#一時的な要因でバックエンドが TCP セッションを切断している" class="headerlink" title="一時的な要因でバックエンドが TCP セッションを切断している"></a><a href="#backend-issue">一時的な要因でバックエンドが TCP セッションを切断している</a></h2>
 
-HTTP KeepAlive の問題ではない場合はバックエンドが一時的に応答不可となり TCP セッションを切断している可能性もございます。
+HTTP KeepAlive の問題ではない場合は一時的な要因でバックエンドが TCP セッションを切断している可能性もございます。
 
 再現の頻度によっては調査が難しくなる場合がございますが、高頻度で再現する場合や時間帯が決まっている場合は以下もご確認ください。
 
