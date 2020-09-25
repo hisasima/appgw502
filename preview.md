@@ -79,6 +79,15 @@ V1 SKU の場合 120 秒、V2 SKU の場合 75 秒です。
 
 [キープアライブ タイムアウトと TCP アイドル タイムアウトの設定はどのようになっていますか?](https://docs.microsoft.com/ja-jp/azure/application-gateway/application-gateway-faq#what-are-the-settings-for-keep-alive-timeout-and-tcp-idle-timeout)
 
+#### Application Gateway で HTTP KeepAlive を無効化する方法はありますか。
+以下のような構成の時、HTTP KeepAlive はクライアント - Application Gateway 間 (1) と、Application Gateway - バックエンド (2) の二つの間で利用される可能性があります。
+
+```
+クライアント --1-- Application Gateway --2-- バックエンド
+```
+
+1,2 ともに Application Gateway にて無効化する方法はありませんので、無効化する場合はクライアントまたはバックエンドにて無効化頂く必要があります。
+
 ## 参考情報
 
 Application Gateway のトラブルシューティングについては以下にも情報がございますので、ご参照ください。
