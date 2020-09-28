@@ -75,7 +75,7 @@ HTTP KeepAlive の問題ではない場合は一時的な要因でバックエ�
 ## FAQ
 	
 #### クライアント - Application Gatweay 間の Application Gateway 側の HTTP KeepAlive のタイムアウトはいくつですか。
-V1 SKU の場合 120 秒、V2 SKU の場合 75 秒です。
+V1 SKU の場合 120 秒、V2 SKU の場合 75 秒です。この値は固定値で変更することはできません。
 
 [キープアライブ タイムアウトと TCP アイドル タイムアウトの設定はどのようになっていますか?](https://docs.microsoft.com/ja-jp/azure/application-gateway/application-gateway-faq#what-are-the-settings-for-keep-alive-timeout-and-tcp-idle-timeout)
 
