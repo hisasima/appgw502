@@ -83,10 +83,10 @@ V1 SKU の場合 120 秒、V2 SKU の場合 75 秒です。この値は固定値
 以下のような構成の時、HTTP KeepAlive はクライアント - Application Gateway 間 (1) と、Application Gateway - バックエンド (2) の 2 つの間で利用される可能性があります。
 
 ```
-クライアント --1-- Application Gateway --2-- バックエンド
+クライアント --(1)-- Application Gateway --(2)-- バックエンド
 ```
 
-1,2 ともに Application Gateway にて HTTP KeepAlive を無効化する方法はありませんので、無効化する場合はクライアントまたはバックエンドにて無効化する必要があります。
+(1),(2) ともに Application Gateway にて HTTP KeepAlive を無効化する方法はありませんので、無効化する場合はクライアントまたはバックエンドにて無効化する必要があります。
 
 ## 参考情報
 
